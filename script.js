@@ -227,10 +227,10 @@ function showVirusEffect(isSuccess) {
     
     document.body.appendChild(virusOverlay);
     
-    // Após 5 segundos, mostrar a brincadeira
+    // Após 3 segundos, mostrar a brincadeira
     setTimeout(() => {
         showJoke(isSuccess);
-    }, 5000);
+    }, 3000);
 }
 
 // Mostrar brincadeira
@@ -264,19 +264,19 @@ function showJoke(isSuccess) {
         // Fluxo de sucesso
         jokeOverlay.innerHTML = `
             <div style="font-size: 4rem; margin-bottom: 30px;">😱</div>
-            <h1 style="color: #ff69b4; font-size: 3rem; margin-bottom: 30px;">BRINCADEIRA! 😄</h1>
-            <p style="font-size: 1.5rem; margin-bottom: 20px; color: #e6d7ff;">
-                Só queríamos te assustar! 😂
+            <h1 style="color: #4caf50; font-size: 3rem; margin-bottom: 30px;">BRINCADEIRA! 😄</h1>
+            <p style="font-size: 1.5rem; margin-bottom: 20px; color: #e8f5e8;">
+                Só queríamos assustar-te! 😂
             </p>
-            <p style="font-size: 1.3rem; margin-bottom: 30px; color: #dda0dd;">
-                Queremos te desejar um aniversário incrível, cheio de alegria, 
+            <p style="font-size: 1.3rem; margin-bottom: 30px; color: #c8e6c9;">
+                Queremos desejar-te um aniversário incrível, cheio de alegria, 
                 sonhos realizados e momentos especiais! 🎂✨
             </p>
-            <p style="font-size: 1.2rem; margin-bottom: 40px; color: #ffb3ba;">
-                Você é uma pessoa maravilhosa e merece todo o amor do mundo! 💜
+            <p style="font-size: 1.2rem; margin-bottom: 40px; color: #a5d6a7;">
+                És uma pessoa maravilhosa e mereces todo o amor do mundo! 💚
             </p>
             <button onclick="showAvatars()" style="
-                background: linear-gradient(45deg, #ff69b4, #da70d6);
+                background: linear-gradient(45deg, #4caf50, #2e7d32);
                 color: white;
                 border: none;
                 padding: 15px 30px;
@@ -284,25 +284,25 @@ function showJoke(isSuccess) {
                 font-family: 'Fredoka', cursive;
                 border-radius: 25px;
                 cursor: pointer;
-                box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+                box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
             ">Continuar a Surpresa! ✨</button>
         `;
     } else {
         // Fluxo de erro
         jokeOverlay.innerHTML = `
             <div style="font-size: 4rem; margin-bottom: 30px;">😱</div>
-            <h1 style="color: #ff69b4; font-size: 3rem; margin-bottom: 30px;">BRINCADEIRA! 😄</h1>
-            <p style="font-size: 1.5rem; margin-bottom: 20px; color: #e6d7ff;">
-                Só queríamos te assustar! 😂
+            <h1 style="color: #4caf50; font-size: 3rem; margin-bottom: 30px;">BRINCADEIRA! 😄</h1>
+            <p style="font-size: 1.5rem; margin-bottom: 20px; color: #e8f5e8;">
+                Só queríamos assustar-te! 😂
             </p>
-            <p style="font-size: 1.3rem; margin-bottom: 30px; color: #dda0dd;">
-                Mesmo assim, queremos te desejar um aniversário incrível! 🎂✨
+            <p style="font-size: 1.3rem; margin-bottom: 30px; color: #c8e6c9;">
+                Mesmo assim, queremos desejar-te um aniversário incrível! 🎂✨
             </p>
-            <p style="font-size: 1.2rem; margin-bottom: 40px; color: #ffb3ba;">
-                Você é especial para nós! 💜
+            <p style="font-size: 1.2rem; margin-bottom: 40px; color: #a5d6a7;">
+                És especial para nós! 💚
             </p>
             <button onclick="showAvatars()" style="
-                background: linear-gradient(45deg, #ff69b4, #da70d6);
+                background: linear-gradient(45deg, #4caf50, #2e7d32);
                 color: white;
                 border: none;
                 padding: 15px 30px;
@@ -310,7 +310,7 @@ function showJoke(isSuccess) {
                 font-family: 'Fredoka', cursive;
                 border-radius: 25px;
                 cursor: pointer;
-                box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+                box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
             ">Ver Surpresa! ✨</button>
         `;
     }
@@ -346,7 +346,7 @@ function showAvatars() {
     `;
     
     avatarsOverlay.innerHTML = `
-        <h1 style="color: #ff69b4; font-size: 2.5rem; margin-bottom: 40px;">Suas Amigas Especiais! 💜</h1>
+        <h1 style="color: #ff69b4; font-size: 2.5rem; margin-bottom: 40px;">💜🩷💚 As Tuas Amigas Especiais! 💚🩷💜</h1>
         <div style="display: flex; gap: 40px; margin-bottom: 40px; flex-wrap: wrap; justify-content: center;">
             <div style="text-align: center;">
                 <div style="
@@ -357,12 +357,59 @@ function showAvatars() {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    font-size: 3rem;
                     margin: 0 auto 15px;
                     box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
                     border: 3px solid #4caf50;
-                ">👩‍🦱</div>
-                <p style="color: #4caf50; font-size: 1.1rem; font-weight: 500;">Cabelo Caracol<br>Olhos Verdes<br>Roupa Verde</p>
+                    position: relative;
+                    overflow: hidden;
+                ">
+                    <div style="
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(135deg, #4caf50, #2e7d32);
+                        border-radius: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                    ">
+                        <div style="
+                            width: 60px;
+                            height: 60px;
+                            background: #ffd54f;
+                            border-radius: 50%;
+                            margin-bottom: 5px;
+                            position: relative;
+                        ">
+                            <div style="
+                                position: absolute;
+                                top: 15px;
+                                left: 15px;
+                                width: 8px;
+                                height: 8px;
+                                background: #2e7d32;
+                                border-radius: 50%;
+                            "></div>
+                            <div style="
+                                position: absolute;
+                                top: 15px;
+                                right: 15px;
+                                width: 8px;
+                                height: 8px;
+                                background: #2e7d32;
+                                border-radius: 50%;
+                            "></div>
+                        </div>
+                        <div style="
+                            width: 40px;
+                            height: 20px;
+                            background: #ff8a65;
+                            border-radius: 50% 50% 0 0;
+                        "></div>
+                    </div>
+                </div>
+                <p style="color: #4caf50; font-size: 1.1rem; font-weight: 500;">Mari</p>
             </div>
             <div style="text-align: center;">
                 <div style="
@@ -373,12 +420,59 @@ function showAvatars() {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    font-size: 3rem;
                     margin: 0 auto 15px;
                     box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
                     border: 3px solid #e91e63;
-                ">👩‍🦳</div>
-                <p style="color: #e91e63; font-size: 1.1rem; font-weight: 500;">Cabelo Ondulado<br>Roupa Rosa</p>
+                    position: relative;
+                    overflow: hidden;
+                ">
+                    <div style="
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(135deg, #f06292, #e91e63);
+                        border-radius: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                    ">
+                        <div style="
+                            width: 60px;
+                            height: 60px;
+                            background: #ffd54f;
+                            border-radius: 50%;
+                            margin-bottom: 5px;
+                            position: relative;
+                        ">
+                            <div style="
+                                position: absolute;
+                                top: 15px;
+                                left: 15px;
+                                width: 8px;
+                                height: 8px;
+                                background: #e91e63;
+                                border-radius: 50%;
+                            "></div>
+                            <div style="
+                                position: absolute;
+                                top: 15px;
+                                right: 15px;
+                                width: 8px;
+                                height: 8px;
+                                background: #e91e63;
+                                border-radius: 50%;
+                            "></div>
+                        </div>
+                        <div style="
+                            width: 40px;
+                            height: 20px;
+                            background: #ff8a65;
+                            border-radius: 50% 50% 0 0;
+                        "></div>
+                    </div>
+                </div>
+                <p style="color: #e91e63; font-size: 1.1rem; font-weight: 500;">Salomé</p>
             </div>
             <div style="text-align: center;">
                 <div style="
@@ -389,16 +483,63 @@ function showAvatars() {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    font-size: 3rem;
                     margin: 0 auto 15px;
                     box-shadow: 0 10px 30px rgba(156, 39, 176, 0.3);
                     border: 3px solid #7b1fa2;
-                ">👩</div>
-                <p style="color: #9c27b0; font-size: 1.1rem; font-weight: 500;">Cabelo Liso<br>Roupa Roxa</p>
+                    position: relative;
+                    overflow: hidden;
+                ">
+                    <div style="
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+                        border-radius: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                    ">
+                        <div style="
+                            width: 60px;
+                            height: 60px;
+                            background: #ffd54f;
+                            border-radius: 50%;
+                            margin-bottom: 5px;
+                            position: relative;
+                        ">
+                            <div style="
+                                position: absolute;
+                                top: 15px;
+                                left: 15px;
+                                width: 8px;
+                                height: 8px;
+                                background: #7b1fa2;
+                                border-radius: 50%;
+                            "></div>
+                            <div style="
+                                position: absolute;
+                                top: 15px;
+                                right: 15px;
+                                width: 8px;
+                                height: 8px;
+                                background: #7b1fa2;
+                                border-radius: 50%;
+                            "></div>
+                        </div>
+                        <div style="
+                            width: 40px;
+                            height: 20px;
+                            background: #ff8a65;
+                            border-radius: 50% 50% 0 0;
+                        "></div>
+                    </div>
+                </div>
+                <p style="color: #9c27b0; font-size: 1.1rem; font-weight: 500;">Thay</p>
             </div>
         </div>
         <p style="font-size: 1.3rem; margin-bottom: 30px; color: #dda0dd;">
-            Essas são as suas amigas que te amam muito! 💜
+            Te amamos muito!
         </p>
         <button onclick="showFinalResult()" style="
             background: linear-gradient(45deg, #ff69b4, #da70d6);
@@ -456,15 +597,15 @@ function showFinalResult() {
         `;
         
         finalOverlay.innerHTML = `
-            <h1 style="color: #ff69b4; font-size: 3rem; margin-bottom: 30px;">🎂 Feliz Aniversário! 🎂</h1>
-            <p style="font-size: 1.5rem; margin-bottom: 20px; color: #e6d7ff;">
-                Mesmo não acertando todas as perguntas, você é especial para nós! 💜
+            <h1 style="color: #4caf50; font-size: 3rem; margin-bottom: 30px;">🎂 Feliz Aniversário! 🎂</h1>
+            <p style="font-size: 1.5rem; margin-bottom: 20px; color: #e8f5e8;">
+                Mesmo não acertando todas as perguntas, és especial para nós! 💚
             </p>
-            <p style="font-size: 1.3rem; margin-bottom: 30px; color: #dda0dd;">
+            <p style="font-size: 1.3rem; margin-bottom: 30px; color: #c8e6c9;">
                 Que este novo ano seja repleto de alegria e momentos incríveis! ✨
             </p>
-            <p style="font-size: 1.2rem; color: #ffb3ba;">
-                Com todo nosso carinho, suas amigas! 💜
+            <p style="font-size: 1.2rem; color: #a5d6a7;">
+                Com todo o nosso carinho, as tuas amigas! 💚
             </p>
         `;
         
@@ -494,16 +635,8 @@ function generateQRCode() {
     // Simular QR code com padrão visual
     qrContainer.innerHTML = createQRPattern(qrCodeData.code);
     
-    // Adicionar informações do vale
-    const voucherInfo = document.createElement('div');
-    voucherInfo.style.marginTop = '10px';
-    voucherInfo.style.fontSize = '0.8rem';
-    voucherInfo.style.color = '#666';
-    voucherInfo.innerHTML = `
-        <div>Código: ${qrCodeData.code}</div>
-        <div>Valor: €${qrCodeData.value}</div>
-    `;
-    qrContainer.appendChild(voucherInfo);
+    // Informações do vale serão mostradas fora do QR code
+    // Não adicionar texto dentro do quadrado do QR code
 }
 
 // Criar padrão visual do QR code
