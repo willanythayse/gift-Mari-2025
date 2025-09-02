@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌙✨ A Jornada da Lua Sombria ✨🌙</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="moon"></div>
+    
+    <header class="header">
+        <h1 class="title">🌙 A Jornada da Lua Sombria ✨</h1>
+        <p class="subtitle">Uma aventura especial para uma pessoa muito especial</p>
+    </header>
+
+    <main class="story-container">
+        <div class="story-panel" id="intro">
+            <div class="character-avatar">
+                <div class="avatar luna-avatar">🌙</div>
+            </div>
+            <div class="story-text">
+                <h2>Capítulo 1: O Despertar</h2>
+                <p>Era uma noite estrelada quando Luna, uma jovem bruxa com cabelos cor de rosa e olhos lilás, descobriu um pergaminho antigo em sua biblioteca gótica...</p>
+                <p>O pergaminho falava sobre um tesouro escondido nas profundezas da Floresta Sombria - um vale mágico que concedia desejos especiais.</p>
+                <p>Mas para encontrá-lo, Luna precisaria resolver três enigmas deixados pelos antigos guardiões...</p>
+                <button class="continue-btn" onclick="startJourney()">Começar a Jornada ✨</button>
+            </div>
+        </div>
+
+        <div class="story-panel hidden" id="chapter1">
+            <div class="character-avatar">
+                <div class="avatar luna-avatar">🌙</div>
+            </div>
+            <div class="story-text">
+                <h2>Capítulo 2: O Primeiro Enigma</h2>
+                <p>Luna chegou à entrada da Floresta Sombria, onde uma estátua de pedra de um gato sombrio a aguardava...</p>
+                <p>A estátua sussurrou: "Para prosseguir, responda: Qual é o nome do protagonista do anime que conta a história de um jovem que se torna um shinigami?"</p>
+                
+                <div class="puzzle-container">
+                    <div class="puzzle-question">
+                        <p>🤔 <strong>Enigma 1:</strong> Este anime é famoso por suas batalhas épicas e personagens memoráveis. O protagonista tem cabelo laranja e luta contra hollows.</p>
+                    </div>
+                    <div class="answer-options">
+                        <button class="answer-btn" onclick="checkAnswer(1, 'Bleach')">Bleach</button>
+                        <button class="answer-btn" onclick="checkAnswer(1, 'One Piece')">One Piece</button>
+                        <button class="answer-btn" onclick="checkAnswer(1, 'Dragon Ball')">Dragon Ball</button>
+                        <button class="answer-btn" onclick="checkAnswer(1, 'Attack on Titan')">Attack on Titan</button>
+                    </div>
+                    <div class="attempts-counter">
+                        <p>Tentativas restantes: <span id="attempts1">3</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="story-panel hidden" id="chapter2">
+            <div class="character-avatar">
+                <div class="avatar luna-avatar">🌙</div>
+            </div>
+            <div class="story-text">
+                <h2>Capítulo 3: O Segundo Enigma</h2>
+                <p>Após resolver o primeiro enigma, Luna encontrou uma caverna iluminada por cristais roxos...</p>
+                <p>Dentro da caverna, uma voz ecoou: "Muito bem, jovem bruxa. Agora responda: Qual é o nome do anime onde os personagens principais são 'caçadores' que procuram por um tesouro?"</p>
+                
+                <div class="puzzle-container">
+                    <div class="puzzle-question">
+                        <p>🤔 <strong>Enigma 2:</strong> Este anime é conhecido por seu sistema de Nen e por ter um dos melhores arcos de torneio da história do anime.</p>
+                    </div>
+                    <div class="answer-options">
+                        <button class="answer-btn" onclick="checkAnswer(2, 'Hunter x Hunter')">Hunter x Hunter</button>
+                        <button class="answer-btn" onclick="checkAnswer(2, 'Fairy Tail')">Fairy Tail</button>
+                        <button class="answer-btn" onclick="checkAnswer(2, 'Black Clover')">Black Clover</button>
+                        <button class="answer-btn" onclick="checkAnswer(2, 'Jujutsu Kaisen')">Jujutsu Kaisen</button>
+                    </div>
+                    <div class="attempts-counter">
+                        <p>Tentativas restantes: <span id="attempts2">3</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="story-panel hidden" id="chapter3">
+            <div class="character-avatar">
+                <div class="avatar luna-avatar">🌙</div>
+            </div>
+            <div class="story-text">
+                <h2>Capítulo 4: O Enigma Final</h2>
+                <p>Luna chegou ao coração da Floresta Sombria, onde uma árvore milenar aguardava...</p>
+                <p>A árvore sussurrou: "Último enigma, jovem bruxa. Qual é o nome do protagonista do anime onde um jovem ninja sonha em se tornar o Hokage de sua vila?"</p>
+                
+                <div class="puzzle-container">
+                    <div class="puzzle-question">
+                        <p>🤔 <strong>Enigma 3:</strong> Este anime é famoso por suas batalhas ninja épicas e por ter um protagonista que carrega uma raposa de nove caudas dentro de si.</p>
+                    </div>
+                    <div class="answer-options">
+                        <button class="answer-btn" onclick="checkAnswer(3, 'Naruto')">Naruto</button>
+                        <button class="answer-btn" onclick="checkAnswer(3, 'Sasuke')">Sasuke</button>
+                        <button class="answer-btn" onclick="checkAnswer(3, 'Kakashi')">Kakashi</button>
+                        <button class="answer-btn" onclick="checkAnswer(3, 'Boruto')">Boruto</button>
+                    </div>
+                    <div class="attempts-counter">
+                        <p>Tentativas restantes: <span id="attempts3">3</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="story-panel hidden" id="finale">
+            <div class="character-avatar">
+                <div class="avatar luna-avatar">🌙</div>
+            </div>
+            <div class="story-text">
+                <h2>Capítulo Final: O Tesouro Revelado</h2>
+                <p>✨ Parabéns! Luna conseguiu resolver todos os enigmas! ✨</p>
+                <p>As três estátuas se iluminaram com uma luz dourada, e do centro da floresta emergiu um baú mágico...</p>
+                <p>Dentro do baú, Luna encontrou um pergaminho especial com uma mensagem:</p>
+                
+                <div class="birthday-message">
+                    <h3>🎂 Mensagem Especial de Aniversário 🎂</h3>
+                    <p>Querida amiga,</p>
+                    <p>Assim como Luna desbravou a Floresta Sombria para encontrar seu tesouro, nós, suas amigas, criamos esta aventura especialmente para você!</p>
+                    <p>Você é uma pessoa incrível que merece todas as coisas boas do mundo. Que este novo ano de vida seja repleto de aventuras, sonhos realizados e muita felicidade!</p>
+                    <p>Com todo nosso carinho,<br>Suas amigas que te amam muito 💜</p>
+                </div>
+                
+                <button class="treasure-btn" onclick="revealTreasure()">Abrir o Tesouro 🎁</button>
+            </div>
+        </div>
+
+        <div class="story-panel hidden" id="treasure">
+            <div class="treasure-container">
+                <h2>🎁 Seu Tesouro Especial 🎁</h2>
+                <div class="voucher-container">
+                    <div class="voucher">
+                        <h3>Vale Presente Mágico</h3>
+                        <p>Valor: €50,00</p>
+                        <p>Para gastar onde quiser!</p>
+                        <div class="qr-code-container">
+                            <div class="qr-code" id="qrCode">
+                                <!-- QR Code será gerado aqui -->
+                            </div>
+                        </div>
+                        <p class="voucher-note">Use este QR code para resgatar seu vale!</p>
+                    </div>
+                </div>
+                <button class="collect-btn" onclick="collectVoucher()">Coletar Vale ✨</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Feito com 💜 para uma pessoa muito especial</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="extras.js"></script>
+</body>
+</html>
