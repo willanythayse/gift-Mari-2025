@@ -198,25 +198,25 @@ function showVirusEffect(isSuccess) {
         line-height: 1.5;
     `;
     
-    // Adicionar texto de vírus
+    // Add virus text
     virusOverlay.innerHTML = `
         <div style="text-align: center; margin-bottom: 30px;">
-            <div style="font-size: 3rem; color: #ff0000; margin-bottom: 20px;">⚠️ VÍRUS DETECTADO ⚠️</div>
-            <div style="color: #ff0000; font-size: 1.5rem; margin-bottom: 20px;">SEU COMPUTADOR FOI INFECTADO!</div>
-            <div style="color: #ffff00;">Iniciando sequência de destruição...</div>
-            <div style="color: #ff0000;">Arquivos sendo deletados...</div>
-            <div style="color: #ff0000;">Sistema comprometido...</div>
-            <div style="color: #ff0000;">Dados pessoais sendo roubados...</div>
-            <div style="color: #ff0000;">Conta bancária sendo acessada...</div>
-            <div style="color: #ff0000;">Fotos sendo enviadas para hackers...</div>
-            <div style="color: #ff0000;">Sistema operacional corrompido...</div>
-            <div style="color: #ff0000;">Tentando conectar com servidores...</div>
-            <div style="color: #ff0000;">Falha na conexão...</div>
-            <div style="color: #ff0000;">Tentando novamente...</div>
-            <div style="color: #ff0000;">Conexão estabelecida!</div>
-            <div style="color: #ff0000;">Enviando dados...</div>
-            <div style="color: #ff0000;">Dados enviados com sucesso!</div>
-            <div style="color: #ff0000;">Seu computador agora pertence aos hackers!</div>
+            <div style="font-size: 3rem; color: #ff0000; margin-bottom: 20px;">⚠️ VIRUS DETECTED ⚠️</div>
+            <div style="color: #ff0000; font-size: 1.5rem; margin-bottom: 20px;">YOUR COMPUTER HAS BEEN INFECTED!</div>
+            <div style="color: #ffff00;">Initiating destruction sequence...</div>
+            <div style="color: #ff0000;">Files being deleted...</div>
+            <div style="color: #ff0000;">System compromised...</div>
+            <div style="color: #ff0000;">Personal data being stolen...</div>
+            <div style="color: #ff0000;">Bank account being accessed...</div>
+            <div style="color: #ff0000;">Photos being sent to hackers...</div>
+            <div style="color: #ff0000;">Operating system corrupted...</div>
+            <div style="color: #ff0000;">Trying to connect to servers...</div>
+            <div style="color: #ff0000;">Connection failed...</div>
+            <div style="color: #ff0000;">Trying again...</div>
+            <div style="color: #ff0000;">Connection established!</div>
+            <div style="color: #ff0000;">Sending data...</div>
+            <div style="color: #ff0000;">Data sent successfully!</div>
+            <div style="color: #ff0000;">Your computer now belongs to the hackers!</div>
         </div>
         <div style="color: #00ff00; font-size: 0.8rem; text-align: center;">
             <div>HACKED BY: Anonymous Group</div>
@@ -261,19 +261,19 @@ function showJoke(isSuccess) {
     `;
     
     if (isSuccess) {
-        // Fluxo de sucesso
+        // Success flow
         jokeOverlay.innerHTML = `
             <div style="font-size: 4rem; margin-bottom: 30px;">😱</div>
-            <h1 style="color: #4caf50; font-size: 3rem; margin-bottom: 30px;">BRINCADEIRA! 😄</h1>
+            <h1 style="color: #4caf50; font-size: 3rem; margin-bottom: 30px;">PRANK! 😄</h1>
             <p style="font-size: 1.5rem; margin-bottom: 20px; color: #e8f5e8;">
-                Só queríamos assustar-te! 😂
+                We just wanted to scare you! 😂
             </p>
             <p style="font-size: 1.3rem; margin-bottom: 30px; color: #c8e6c9;">
-                Queremos desejar-te um aniversário incrível, cheio de alegria, 
-                sonhos realizados e momentos especiais! 🎂✨
+                We want to wish you an incredible birthday, full of joy, 
+                dreams come true and special moments! 🎂✨
             </p>
             <p style="font-size: 1.2rem; margin-bottom: 40px; color: #a5d6a7;">
-                És uma pessoa maravilhosa e mereces todo o amor do mundo! 💚
+                You are a wonderful person and deserve all the love in the world! 💚
             </p>
             <button onclick="showAvatars()" style="
                 background: linear-gradient(45deg, #4caf50, #2e7d32);
@@ -285,21 +285,21 @@ function showJoke(isSuccess) {
                 border-radius: 25px;
                 cursor: pointer;
                 box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
-            ">Continuar a Surpresa! ✨</button>
+            ">Continue the Surprise! ✨</button>
         `;
     } else {
-        // Fluxo de erro
+        // Error flow
         jokeOverlay.innerHTML = `
             <div style="font-size: 4rem; margin-bottom: 30px;">😱</div>
-            <h1 style="color: #4caf50; font-size: 3rem; margin-bottom: 30px;">BRINCADEIRA! 😄</h1>
+            <h1 style="color: #4caf50; font-size: 3rem; margin-bottom: 30px;">PRANK! 😄</h1>
             <p style="font-size: 1.5rem; margin-bottom: 20px; color: #e8f5e8;">
-                Só queríamos assustar-te! 😂
+                We just wanted to scare you! 😂
             </p>
             <p style="font-size: 1.3rem; margin-bottom: 30px; color: #c8e6c9;">
-                Mesmo assim, queremos desejar-te um aniversário incrível! 🎂✨
+                Even so, we want to wish you an incredible birthday! 🎂✨
             </p>
             <p style="font-size: 1.2rem; margin-bottom: 40px; color: #a5d6a7;">
-                És especial para nós! 💚
+                You are special to us! 💚
             </p>
             <button onclick="showAvatars()" style="
                 background: linear-gradient(45deg, #4caf50, #2e7d32);
@@ -311,7 +311,7 @@ function showJoke(isSuccess) {
                 border-radius: 25px;
                 cursor: pointer;
                 box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
-            ">Ver Surpresa! ✨</button>
+            ">See Surprise! ✨</button>
         `;
     }
     
@@ -346,7 +346,7 @@ function showAvatars() {
     `;
     
     avatarsOverlay.innerHTML = `
-        <h1 style="color: #ff69b4; font-size: 2.5rem; margin-bottom: 40px;">💜🩷💚 As Tuas Amigas Especiais! 💚🩷💜</h1>
+        <h1 style="color: #ff69b4; font-size: 2.5rem; margin-bottom: 40px;">💜🩷💚 Your Special Friends! 💚🩷💜</h1>
         <div style="display: flex; gap: 40px; margin-bottom: 40px; flex-wrap: wrap; justify-content: center;">
             <div style="text-align: center;">
                 <div style="
@@ -539,7 +539,7 @@ function showAvatars() {
             </div>
         </div>
         <p style="font-size: 1.3rem; margin-bottom: 30px; color: #dda0dd;">
-            Te amamos muito!
+            We love you so much!
         </p>
         <button onclick="showFinalResult()" style="
             background: linear-gradient(45deg, #ff69b4, #da70d6);
@@ -551,7 +551,7 @@ function showAvatars() {
             border-radius: 25px;
             cursor: pointer;
             box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
-        ">Ver Resultado Final! 🎁</button>
+        ">See Final Result! 🎁</button>
     `;
     
     document.body.appendChild(avatarsOverlay);
@@ -597,15 +597,15 @@ function showFinalResult() {
         `;
         
         finalOverlay.innerHTML = `
-            <h1 style="color: #4caf50; font-size: 3rem; margin-bottom: 30px;">🎂 Feliz Aniversário! 🎂</h1>
+            <h1 style="color: #4caf50; font-size: 3rem; margin-bottom: 30px;">🎂 Happy Birthday! 🎂</h1>
             <p style="font-size: 1.5rem; margin-bottom: 20px; color: #e8f5e8;">
-                Mesmo não acertando todas as perguntas, és especial para nós! 💚
+                Even without getting all the questions right, you are special to us! 💚
             </p>
             <p style="font-size: 1.3rem; margin-bottom: 30px; color: #c8e6c9;">
-                Que este novo ano seja repleto de alegria e momentos incríveis! ✨
+                May this new year be full of joy and incredible moments! ✨
             </p>
             <p style="font-size: 1.2rem; color: #a5d6a7;">
-                Com todo o nosso carinho, as tuas amigas! 💚
+                With all our love, your friends! 💚
             </p>
         `;
         
@@ -619,24 +619,16 @@ function revealTreasure() {
     generateQRCode();
 }
 
-// Gerar QR Code
+// Generate WhatsApp QR Code
 function generateQRCode() {
     const qrContainer = document.getElementById('qrCode');
     
-    // Criar um QR code simples (em um projeto real, você usaria uma biblioteca como qrcode.js)
-    const qrCodeData = {
-        type: 'voucher',
-        value: 50,
-        currency: 'EUR',
-        code: 'GIFT2024' + Math.random().toString(36).substr(2, 9).toUpperCase(),
-        message: 'Vale presente especial de aniversário'
-    };
-    
-    // Simular QR code com padrão visual
-    qrContainer.innerHTML = createQRPattern(qrCodeData.code);
-    
-    // Informações do vale serão mostradas fora do QR code
-    // Não adicionar texto dentro do quadrado do QR code
+    // Create WhatsApp QR code image
+    qrContainer.innerHTML = `
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8IS0tIFNRIGNvZGUgcGF0dGVybiBzaW11bGF0aW9uIC0tPgo8cmVjdCB4PSIxMCIgeT0iMTAiIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz4KPHJlY3QgeD0iMjAiIHk9IjIwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE0MCIgeT0iMjAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMjAiIHk9IjE0MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSJibGFjayIvPgo8IS0tIFdoYXRzQXBwIGljb24gLS0+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iMjAiIGZpbGw9IiMyNUQzNjYiLz4KPHBhdGggZD0iTTkwIDkwSDExMFYxMTBIOVoiIGZpbGw9IndoaXRlIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjEwIiBmaWxsPSIjMjVEMzY2Ij5XaGF0c0FwcDwvdGV4dD4KPC9zdmc+" 
+             alt="WhatsApp QR Code" 
+             style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;" />
+    `;
 }
 
 // Criar padrão visual do QR code
@@ -678,9 +670,9 @@ function collectVoucher() {
         animation: fadeIn 0.5s ease;
     `;
     successMessage.innerHTML = `
-        <h3>🎉 Parabéns! 🎉</h3>
-        <p>Seu vale de €50 foi coletado com sucesso!</p>
-        <p>Use o QR code para resgatar seu presente!</p>
+        <h3>🎉 Congratulations! 🎉</h3>
+        <p>Your €50 voucher has been collected successfully!</p>
+        <p>Use the QR code to contact us!</p>
         <button onclick="this.parentElement.remove()" style="
             background: white;
             color: #ff69b4;
@@ -691,7 +683,7 @@ function collectVoucher() {
             cursor: pointer;
             font-family: 'Fredoka', cursive;
             font-weight: 500;
-        ">Fechar</button>
+        ">Close</button>
     `;
     
     document.body.appendChild(successMessage);
