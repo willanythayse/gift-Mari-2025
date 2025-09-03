@@ -572,9 +572,8 @@ function showFinalResult() {
                       });
     
     if (allCorrect) {
-        // Mostrar voucher
-        showPanel('treasure');
-        generateQRCode();
+        // Mostrar mensagem final com PRANK antes do voucher
+        showPanel('finale');
     } else {
         // Mostrar mensagem final sem voucher
         const finalOverlay = document.createElement('div');
