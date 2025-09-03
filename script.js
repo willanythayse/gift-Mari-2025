@@ -622,13 +622,29 @@ function revealTreasure() {
 // Generate WhatsApp QR Code
 function generateQRCode() {
     const qrContainer = document.getElementById('qrCode');
-    
-    // Create WhatsApp QR code image
-    qrContainer.innerHTML = `
-        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8IS0tIFNRIGNvZGUgcGF0dGVybiBzaW11bGF0aW9uIC0tPgo8cmVjdCB4PSIxMCIgeT0iMTAiIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz4KPHJlY3QgeD0iMjAiIHk9IjIwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE0MCIgeT0iMjAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMjAiIHk9IjE0MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSJibGFjayIvPgo8IS0tIFdoYXRzQXBwIGljb24gLS0+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iMjAiIGZpbGw9IiMyNUQzNjYiLz4KPHBhdGggZD0iTTkwIDkwSDExMFYxMTBIOVoiIGZpbGw9IndoaXRlIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjEwIiBmaWxsPSIjMjVEMzY2Ij5XaGF0c0FwcDwvdGV4dD4KPC9zdmc+" 
-             alt="WhatsApp QR Code" 
-             style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;" />
-    `;
+    if (!qrContainer) return;
+
+    const externalImg = new Image();
+    externalImg.alt = 'WhatsApp QR Code';
+    externalImg.style.width = '100%';
+    externalImg.style.height = '100%';
+    externalImg.style.objectFit = 'contain';
+    externalImg.style.borderRadius = '10px';
+
+    externalImg.onload = function() {
+        qrContainer.innerHTML = '';
+        qrContainer.appendChild(externalImg);
+    };
+
+    externalImg.onerror = function() {
+        qrContainer.innerHTML = `
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8IS0tIFNRIGNvZGUgcGF0dGVybiBzaW11bGF0aW9uIC0tPgo8cmVjdCB4PSIxMCIgeT0iMTAiIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz4KPHJlY3QgeD0iMjAiIHk9IjIwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE0MCIgeT0iMjAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMjAiIHk9IjE0MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSJibGFjayIvPgo8IS0tIFdoYXRzQXBwIGljb24gLS0+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iMjAiIGZpbGw9IiMyNUQzNjYiLz4KPHBhdGggZD0iTTkwIDkwSDExMFYxMTBIOVoiIGZpbGw9IndoaXRlIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjEwIiBmaWxsPSIjMjVEMzY2Ij5XaGF0c0FwcDwvdGV4dD4KPC9zdmc+" 
+                 alt="WhatsApp QR Code" 
+                 style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;" />
+        `;
+    };
+
+    externalImg.src = 'assets/whatsapp_qr.png';
 }
 
 // Criar padrão visual do QR code
